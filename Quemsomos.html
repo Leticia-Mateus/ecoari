@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quem Somos - EcoAri</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+    header {
+      background-color: #2E7D32;
+      padding: 20px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 24px;
+    }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #FF9800;
+    }
+    .menu-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .menu-dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #FF9800;
+      min-width: 160px;
+      z-index: 1;
+    }
+    .menu-dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      display: block;
+    }
+    .menu-dropdown-content a:hover {
+      background-color: #e67e00;
+    }
+    .menu-dropdown:hover .menu-dropdown-content {
+      display: block;
+    }
+
+    /* Banner com imagem MAIOR */
+    .banner {
+      width: 100%;
+      height: 500px; /* Altura maior */
+      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .content {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-left: 6px solid #FF9800;
+    }
+
+    h2 {
+      color: #2E7D32;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    p {
+      color: #444;
+      line-height: 1.6;
+    }
+
+    footer {
+      background-color: #2E7D32;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>EcoAri</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <div class="menu-dropdown">
+        <a href="#">Notícias ▾</a>
+        <div class="menu-dropdown-content">
+          <a href="escola.html">Escola</a>
+          <a href="brasil.html">Brasil</a>
+          <a href="mundo.html">Mundo</a>
+          <a href="regiao.html">Região</a>
+          <a href="coreia.html">Coreia</a>
+          <a href="curiosidades.html">Curiosidades</a>
+        </div>
+      </div>
+      <a href="projetos.html">Projetos Sustentáveis</a>
+      <a href="colunistas.html">Colunistas</a>
+      <a href="quemsomos.html">Sobre</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <div class="banner"></div>
+
+  <div class="content">
+    <h2>Quem Somos</h2>
+    <p>O <strong>EcoAri</strong> nasceu com o propósito de informar, conscientizar e inspirar mudanças em prol da sustentabilidade. Acreditamos que o conhecimento é o primeiro passo para transformar o mundo em um lugar melhor para todos os seres vivos.</p>
+
+    <p>Fundado em 2025, nosso time é formado por estudantes, educadores e apaixonados pela natureza, que buscam diariamente trazer notícias relevantes, projetos inovadores e curiosidades que mostram como pequenas atitudes podem gerar grandes impactos.</p>
+
+    <p>Nossa missão é ser uma fonte confiável de informação para quem acredita no poder da educação ambiental e da cidadania ativa. Estamos comprometidos em compartilhar histórias que inspiram ação, respeito e cuidado com o planeta.</p>
+
+    <p>Juntos, construímos um futuro mais verde. Seja bem-vindo ao EcoAri</p>
+  </div>
+
+  <footer>
+    © 2025 EcoAri – Todos os direitos reservados
+  </footer>
+
+</body>
+</html>

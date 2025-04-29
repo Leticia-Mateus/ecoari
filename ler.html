@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Futuro em Pauta - ECOARI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fff;
+    }
+    header {
+      background-color: #2E7D32;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav {
+      position: relative;
+    }
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #ffffff;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    .dropdown-content a {
+      color: #2E7D32;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover {
+      background-color: #FF9800;
+      color: white;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #FFE0B2;
+      padding: 2rem;
+    }
+    .hero img {
+      width: 80%;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    }
+    .section {
+      padding: 2rem;
+    }
+    .section h2 {
+      color: #2E7D32;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .content {
+      max-width: 900px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    .content p {
+      margin-bottom: 1rem;
+    }
+    footer {
+      background-color: #2E7D32;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ECOARI 🌿</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <div class="dropdown">
+        <a href="#">Notícias</a>
+        <div class="dropdown-content">
+          <a href="escola.html">Escola</a>
+          <a href="brasil.html">Brasil</a>
+          <a href="mundo.html">Mundo</a>
+          <a href="regiao.html">Região</a>
+          <a href="curiosidades.html">Curiosidades</a>
+        </div>
+      </div>
+      <a href="sobre.html">Sobre</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="Imagem/futuro.jpeg" alt="Imagem representando o futuro sustentável">
+  </section>
+
+  <section class="section">
+    <h2>O Futuro em Pauta</h2>
+    <div class="content">
+      <p>O planeta enfrenta desafios urgentes, e o futuro sustentável depende de ações que tomamos hoje. Iniciativas de reflorestamento, energia limpa e economia circular estão se tornando pilares para a preservação do meio ambiente.</p>
+      
+      <p>Organizações, governos e cidadãos se unem em projetos inovadores, mostrando que é possível crescer de maneira consciente e responsável. Da construção de cidades verdes à proteção dos oceanos, cada passo é essencial para garantir um futuro próspero para as próximas gerações.</p>
+      
+      <p>Acompanhe as principais tendências, tecnologias e histórias inspiradoras que estão moldando um mundo mais equilibrado, onde o respeito à natureza e ao ser humano andam lado a lado.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>ECOARI - Jornalismo com propósito</p>
+  </footer>
+
+</body>
+</html>

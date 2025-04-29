@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Chatbot Simples</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e6ffe6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    #chat-container {
+      background: #fff;
+      border-radius: 10px;
+      width: 400px;
+      padding: 20px;
+      box-shadow: 0 0 10px #aaa;
+    }
+    #messages {
+      height: 300px;
+      overflow-y: scroll;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .user, .bot {
+      margin: 5px 0;
+      padding: 8px;
+      border-radius: 8px;
+    }
+    .user {
+      background-color: #c6f7c3;
+      text-align: right;
+    }
+    .bot {
+      background-color: #f0f0f0;
+      text-align: left;
+    }
+    #input-area {
+      display: flex;
+    }
+    #user-input {
+      flex: 1;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    #send-button {
+      padding: 8px 15px;
+      margin-left: 5px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div id="chat-container">
+  <div id="messages"></div>
+  <div id="input-area">
+    <input type="text" id="user-input" placeholder="Digite sua mensagem...">
+    <button id="send-button">Enviar</button>
+  </div>
+</div>
+
+<script>
+  const messagesDiv = document.getElementById("messages");
+  const userInput = document.getElementById("user-input");
+  const sendButton = document.getElementById("send-button");
+
+  function addMessage(text, sender) {
+    const message = document.createElement("div");
+    message.classList.add(sender);
+    message.innerText = text;
+    messagesDiv.appendChild(message);
+    messagesDiv.scrollTop = messagesDiv.scrollHeight;
+  }
+
+  function botResponse(input) {
+    input = input.toLowerCase();
+
+    if (input.includes("oi") || input.includes("olá")) {
+      return "Oi! Como posso te ajudar?";
+    } else if (input.includes("tudo bem")) {
+      return "Tudo ótimo! E você?";
+    } else if (input.includes("seu nome")) {
+      return "Sou um chatbot feito em JavaScript!";
+    } else {
+      return "Desculpa, ainda estou aprendendo. Pode perguntar outra coisa!";
+    }
+  }
+
+  sendButton.addEventListener("click", () => {
+    const inputText = userInput.value.trim();
+    if (inputText) {
+      addMessage(inputText, "user");
+      const response = botResponse(inputText);
+      setTimeout(() => {
+        addMessage(response, "bot");
+      }, 500);
+      userInput.value = "";
+    }
+  });
+
+  userInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      sendButton.click();
+    }
+  });
+</script>
+
+</body>
+</html>

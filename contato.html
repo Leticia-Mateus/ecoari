@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - ECOARI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fff;
+    }
+    header {
+      background-color: #2E7D32;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav {
+      position: relative;
+    }
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #ffffff;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    .dropdown-content a {
+      color: #2E7D32;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover {
+      background-color: #FF9800;
+      color: white;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #FFE0B2;
+      padding: 2rem;
+    }
+    .hero img {
+      width: 80%;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    }
+    .section {
+      padding: 2rem;
+      text-align: center;
+    }
+    .section h2 {
+      color: #2E7D32;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .contact-form {
+      max-width: 600px;
+      margin: 2rem auto;
+      text-align: left;
+      background: #F5F5F5;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    }
+    .contact-form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-family: 'Open Sans', sans-serif;
+    }
+    .contact-form button {
+      background-color: #2E7D32;
+      color: white;
+      border: none;
+      padding: 0.75rem 2rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .contact-form button:hover {
+      background-color: #FF9800;
+    }
+    footer {
+      background-color: #2E7D32;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>ECOARI 🌿</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <div class="dropdown">
+        <a href="#">Notícias</a>
+        <div class="dropdown-content">
+          <a href="escola.html">Escola</a>
+          <a href="brasil.html">Brasil</a>
+          <a href="mundo.html">Mundo</a>
+          <a href="regiao.html">Região</a>
+          <a href="curiosidades.html">Curiosidades</a>
+        </div>
+      </div>
+      <a href="sobre.html">Sobre</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="Imagem/contato.jpeg" alt="Imagem de contato sustentável">
+  </section>
+
+  <section class="section">
+    <h2>Fale Conosco</h2>
+    <div class="contact-form">
+      <form action="#" method="POST">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="subject">Assunto:</label>
+        <input type="text" id="subject" name="subject" required>
+
+        <label for="message">Mensagem:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>ECOARI - Jornalismo com propósito</p>
+  </footer>
+
+</body>
+</html>

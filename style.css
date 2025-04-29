@@ -1,0 +1,183 @@
+/* Reset básico */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Cabeçalho superior */
+#cabecalho {
+  background-color: #ff7300;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  justify-content: start;
+  gap: 1rem;
+}
+
+.fa {
+  font-size: 25px;
+  color: white;
+}
+
+#ari {
+  color: white;
+  font-size: 14px;
+}
+
+/* Container do cabeçalho principal */
+#cabe {
+  background-color: white;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8rem;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+#logo {
+  height: 150px;
+
+}
+
+/* Menu */
+#menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+#menu span {
+  position: relative;
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+#menu span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  background: #e2630e;
+  transition: height 0.3s ease-in-out;
+  z-index: -1;
+}
+
+#menu span:hover::after {
+  height: 100%;
+}
+
+#menu span:hover {
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+/* Capa */
+#capa {
+  background: url("Imagem/sustenta.jpg");
+  width:99%;
+  height: 30rem;
+  background-size: cover;
+    border-radius: 20px;
+  }
+  
+
+/* Título */
+#o {
+  color: #ff7300;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Menu hambúrguer para telas menores */
+#menu-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#menu-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  #menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    padding: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  #menu.show {
+    display: flex;
+  }
+
+  #menu span {
+    display: block;
+    text-align: center;
+    padding: 10px;
+  }
+
+  #menu-toggle {
+    display: block;
+  }
+ 
+}
+#o:hover{
+  color: black;
+}
+#a{
+  font-size: 50px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#sus{
+    border-radius: 15px; 
+    width: 400px; 
+    height: auto; 
+    float: right; 
+    margin-right: 15px; 
+    }
+#su{
+  border-radius: 15px; 
+  width: 400px; 
+  height: auto; 
+  float: right; 
+  margin-right: 15px; 
+}
+#central {
+  display: flex;
+  justify-content: center;
+  gap: 500px;
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: rgb(255, 94, 0);
+  gap: 400px;
+  padding: 20px;
+}
+#tex{
+    display: block;  
+    text-align: left; 
+}
