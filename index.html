@@ -18,6 +18,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
     }
     nav {
       position: relative;
@@ -56,16 +57,18 @@
     .hero {
       display: flex;
       background-color: #FFE0B2;
-
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 1rem;
     }
-    .hero img{
-        transform: scale(1);
+    .hero img {
+      max-width: 100%;
+      height: auto;
     }
     .hero-text {
       max-width: 50%;
-      padding: 2px;
+      padding: 1rem;
     }
     .hero-text h1 {
       color: #2E7D32;
@@ -75,13 +78,14 @@
     .hero-text p {
       margin: 1rem 0;
     }
-    .hero-text button {
+    .hero-text a {
+      display: inline-block;
       background-color: #FF9800;
       color: white;
       padding: 0.5rem 1rem;
-      border: none;
+      text-decoration: none;
       font-weight: bold;
-      cursor: pointer;
+      margin-top: 1rem;
     }
     .section {
       padding: 2rem;
@@ -122,9 +126,10 @@
     .projects {
       display: flex;
       gap: 2rem;
+      flex-wrap: wrap;
     }
     .project {
-      flex: 1;
+      flex: 1 1 300px;
       background-color: #F5F5F5;
       padding: 1rem;
       border-radius: 8px;
@@ -135,10 +140,13 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
     }
     .newsletter input {
       padding: 0.5rem;
       width: 250px;
+      max-width: 100%;
     }
     .newsletter button {
       background-color: #2E7D32;
@@ -153,6 +161,51 @@
       color: white;
       text-align: center;
       padding: 1rem;
+    }
+
+    /* RESPONSIVIDADE */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-text {
+        max-width: 100%;
+      }
+      .cards {
+        flex-direction: column;
+        align-items: center;
+      }
+      .card {
+        width: 80%;
+      }
+      .projects {
+        flex-direction: column;
+        align-items: center;
+      }
+      .project {
+        width: 90%;
+      }
+      nav a {
+        margin: 0 0.5rem;
+      }
+      .newsletter {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-text h1 {
+        font-size: 2rem;
+      }
+      .section h2 {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
