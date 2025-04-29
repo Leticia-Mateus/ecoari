@@ -300,5 +300,170 @@
   <footer>
     <p>ECOARI - Jornalismo com propósito</p>
   </footer>
+  <div><!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Chatbot ECOARI</title>
+      <style>
+        body {
+          margin: 0;
+          font-family: 'Open Sans', sans-serif;
+        }
+    
+        /* BOTÃO DO CHAT */
+        .chat-button {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          background-color: #2E7D32;
+          color: white;
+          border: none;
+          border-radius: 50%;
+          width: 60px;
+          height: 60px;
+          font-size: 30px;
+          cursor: pointer;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+    
+        /* ÍCONE (bonequinho) */
+        .chat-button::before {
+          content: '🤖';
+        }
+    
+        /* JANELA DO CHAT */
+        .chat-popup {
+          display: none;
+          position: fixed;
+          bottom: 90px;
+          right: 20px;
+          width: 300px;
+          background-color: #fff;
+          border: 2px solid #2E7D32;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+          overflow: hidden;
+          z-index: 1000;
+        }
+    
+        /* CABEÇALHO DO CHAT */
+        .chat-popup-header {
+          background-color: #2E7D32;
+          color: white;
+          padding: 10px;
+          text-align: center;
+          font-weight: bold;
+        }
+    
+        /* MENSAGENS */
+        .chat-popup-messages {
+          padding: 10px;
+          height: 250px;
+          overflow-y: auto;
+          background-color: #f9f9f9;
+        }
+    
+        .user-message {
+          text-align: right;
+          margin-bottom: 10px;
+          color: #333;
+        }
+    
+        .bot-message {
+          text-align: left;
+          margin-bottom: 10px;
+          color: #2E7D32;
+        }
+    
+        /* INPUT DO USUÁRIO */
+        .chat-popup-input {
+          display: flex;
+          border-top: 1px solid #ccc;
+        }
+    
+        .chat-popup-input input {
+          flex: 1;
+          padding: 10px;
+          border: none;
+          outline: none;
+        }
+    
+        .chat-popup-input button {
+          background-color: #2E7D32;
+          color: white;
+          border: none;
+          padding: 10px 15px;
+          cursor: pointer;
+        }
+      </style>
+    </head>
+    
+    <body>
+    
+    <!-- BOTÃO CHAT -->
+    <button class="chat-button" onclick="toggleChat()"></button>
+    
+    <!-- JANELA DO CHAT -->
+    <div class="chat-popup" id="chatPopup">
+      <div class="chat-popup-header">Atendente ECOARI 🌿</div>
+      <div class="chat-popup-messages" id="chatMessages"></div>
+      <div class="chat-popup-input">
+        <input type="text" id="chatInput" placeholder="Digite sua mensagem..." onkeypress="if(event.key==='Enter'){sendMessage();}">
+        <button onclick="sendMessage()">Enviar</button>
+      </div>
+    </div>
+    
+    <!-- JAVASCRIPT CHAT -->
+    <script>
+      // Função para abrir e fechar o chat
+      function toggleChat() {
+        var chatPopup = document.getElementById('chatPopup');
+        chatPopup.style.display = (chatPopup.style.display === 'block') ? 'none' : 'block';
+      }
+    
+      // Função para enviar mensagem
+      function sendMessage() {
+        var input = document.getElementById('chatInput');
+        var message = input.value.trim().toLowerCase();
+        if (message !== '') {
+          var chatMessages = document.getElementById('chatMessages');
+    
+          // Exibe mensagem do usuário
+          var userMsg = document.createElement('div');
+          userMsg.className = 'user-message';
+          userMsg.textContent = input.value;
+          chatMessages.appendChild(userMsg);
+    
+          // Cria resposta do bot
+          var botMsg = document.createElement('div');
+          botMsg.className = 'bot-message';
+    
+          if (message.includes('olá') || message.includes('oi')) {
+            botMsg.textContent = 'Olá! Como posso te ajudar hoje? 🌱';
+          } else if (message.includes('notícia') || message.includes('novidade')) {
+            botMsg.textContent = 'Você pode conferir as últimas notícias na seção Notícias! 📰';
+          } else if (message.includes('projeto') || message.includes('sustentabilidade')) {
+            botMsg.textContent = 'Temos projetos incríveis! Hortas urbanas, reflorestamento e muito mais! 🌳';
+          } else if (message.includes('contato') || message.includes('email')) {
+            botMsg.textContent = 'Nosso e-mail de contato é ecoari@contato.com 📧';
+          } else if (message.includes('obrigado') || message.includes('valeu')) {
+            botMsg.textContent = 'Nós que agradecemos pelo seu interesse! 💚';
+          } else {
+            botMsg.textContent = 'Desculpe, não entendi. Reformule sua pergunta, por favor. 🤔';
+          }
+    
+          chatMessages.appendChild(botMsg);
+    
+          input.value = ''; // limpa o campo
+          chatMessages.scrollTop = chatMessages.scrollHeight; // rola para baixo
+        }
+      }
+    </script>
+    
+    </body>
+    </html>
+    </div>
 </body>
 </html>
