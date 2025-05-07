@@ -12,6 +12,7 @@
       padding: 0;
       background-color: #f5f5f5;
     }
+
     header {
       background-color: #2E7D32;
       padding: 20px;
@@ -19,24 +20,30 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
     }
+
     header h1 {
       font-family: 'Montserrat', sans-serif;
       font-size: 24px;
     }
+
     nav a {
       color: white;
       margin: 0 10px;
       text-decoration: none;
       font-weight: bold;
     }
+
     nav a:hover {
       color: #ffffff;
     }
+
     .menu-dropdown {
       position: relative;
       display: inline-block;
     }
+
     .menu-dropdown-content {
       display: none;
       position: absolute;
@@ -44,14 +51,17 @@
       min-width: 160px;
       z-index: 1;
     }
+
     .menu-dropdown-content a {
       color: rgb(91, 175, 91);
       padding: 12px 16px;
       display: block;
     }
+
     .menu-dropdown-content a:hover {
       background-color: #ffab0e;
     }
+
     .menu-dropdown:hover .menu-dropdown-content {
       display: block;
     }
@@ -63,12 +73,15 @@
       margin: 30px auto;
       padding: 20px;
     }
-  .content img{
-  align-self: center;
-  height: 1000px;
-  width: 750px;
 
-  }
+    .content img {
+      width: 100%;
+      max-width: 750px;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto 20px;
+    }
 
     h2 {
       color: #2E7D32;
@@ -99,33 +112,56 @@
       padding: 15px;
       margin-top: 40px;
     }
+
     .emergency-contact {
-  background-color: #ffffff;
-  border-left: 6px solid #FF9800;
-  padding: 20px;
-  margin: 30px auto;
-  max-width: 800px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
+      background-color: #ffffff;
+      border-left: 6px solid #FF9800;
+      padding: 20px;
+      margin: 30px auto;
+      max-width: 800px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
 
-.emergency-contact h3 {
-  color: #2E7D32;
-  font-family: 'Montserrat', sans-serif;
-  margin-top: 0;
-}
+    .emergency-contact h3 {
+      color: #2E7D32;
+      font-family: 'Montserrat', sans-serif;
+      margin-top: 0;
+    }
 
-.emergency-contact p {
-  color: #444;
-  font-size: 15px;
-  margin: 10px 0;
-}
+    .emergency-contact p {
+      color: #444;
+      font-size: 15px;
+      margin: 10px 0;
+    }
 
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
+      .content {
+        padding: 10px;
+      }
+
+      .card, .emergency-contact {
+        padding: 15px;
+      }
+
+      .menu-dropdown-content {
+        position: static;
+        box-shadow: none;
+      }
+    }
   </style>
 </head>
 <body>
 
- 
   <header>
     <h1>EcoAri</h1>
     <nav>
@@ -137,7 +173,6 @@
           <a href="brasil.html">Brasil</a>
           <a href="mundo.html">Mundo</a>
           <a href="regiao.html">Região</a>
-          <!-- <a href="curiosidades.html">Curiosidades</a> -->
         </div>
       </div>
       <a href="sobre.html">Sobre</a>
@@ -145,26 +180,29 @@
     </nav>
   </header>
 
-  <!-- Conteúdo da Página -->
   <div class="content">
     <h2>CREAS</h2>
     <img src="Imagem/creas.jpg" alt="Imagem notícia">
     <div class="card">
-      <h3>CENTRO DE REFERÊNCIA ESPECIALIZADO
-        DE ASSISTÊNCIA SOCIAL - CREAS</h3>
+      <h3>CENTRO DE REFERÊNCIA ESPECIALIZADO DE ASSISTÊNCIA SOCIAL - CREAS</h3>
       <p>Olá alunos, tudo bem? Mais uma edição do EcoAri veio aí para te deixar informado sobre os acontecimentos escolares!</p>
-        <p>Na segunda-feira (05/05), tivemos o privilégio de receber, em nossa escola, palestrantes do CREAS (Centro de Referência Especializado de Assistência Social). A palestra abordou temas de grande relevância na atualidade, como o abuso sexual de crianças e adolescentes, a exposição à pornografia e o abuso de pessoas em situação de vulnerabilidade. Ressaltar essas questões durante a adolescência é fundamental, pois contribui para que jovens que, de alguma forma, tenham vivenciado abusos psicológicos e/ou físicos sintam-se encorajados a buscar ajuda especializada.
-        </p>
-        As palestrantes promoveram dinâmicas voltadas à socialização dos jovens, com foco na interação social e no desenvolvimento do autoconhecimento. A palestra também abordou a importância do dia 18 de maio, onde essa data é nacionalmente conhecido no Brasil como o Dia Nacional de Combate ao Abuso e à Exploração Sexual de Crianças e Adolescentes. Embora o foco seja a infância e adolescência, muitas das vítimas também são meninas, o que se conecta ao combate à violência de gênero. Portanto, apesar de não ser uma data voltada exclusivamente à mulher, ela integra uma luta mais ampla pelos direitos humanos e contra todo tipo de violência.</p>
-        <p>A violência contra a mulher é uma grave violação dos direitos humanos e um problema social que afeta mulheres de todas as idades, classes sociais, raças e culturas. Ela pode se manifestar de diversas formas — física, psicológica, sexual, moral e patrimonial — e ocorre tanto em ambientes públicos quanto privados, muitas vezes dentro do próprio lar.
-          Combater esse tipo de violência exige o envolvimento de toda a sociedade: por meio da denúncia, da promoção da equidade de gênero, da educação para o respeito e da criação de ambientes seguros e acolhedores para as vítimas. Em briga de marido e mulher, devemos meter a colher sim!</p>
-          <p>Abusos sexuais, morais e psicológicos causam danos profundos e duradouros na vida de crianças e adolescentes. Esses traumas comprometem a autoestima, o desenvolvimento emocional, o desempenho escolar e a capacidade de se relacionar com os outros. As vítimas podem sofrer de ansiedade, depressão, isolamento social e, em casos graves, desenvolver comportamentos autodestrutivos. A ajuda adequada e o apoio emocional são fundamentais para a recuperação e proteção dessas crianças e adolescentes. Por isso, se precisar de ajuda, busque agentes especializados para lhe ajudar com um tratamento adequado. </p>
-          <div class="emergency-contact">
-            <h3>CENTRO DE REFERÊNCIA ESPECIALIZADO
-              DE ASSISTÊNCIA SOCIAL - CREAS</h3>
-            <p><strong>Tel: (85) 3513-2015 / (85) 98953-0916.</strong> (ligação gratuita)</p>
-            <p><strong>Endereço:</strong>RUA JOSMO GURGEL ARAÚJO , 1136 - Centro - Itaitinga.</p>
-            <p><strong>Atendimento:</strong>08:00 AS 12:00 E 13:00 AS 17:00.</p>
-          </div>
-          
+      <p>Na segunda-feira (05/05), tivemos o privilégio de receber, em nossa escola, palestrantes do CREAS (Centro de Referência Especializado de Assistência Social). A palestra abordou temas de grande relevância na atualidade, como o abuso sexual de crianças e adolescentes, a exposição à pornografia e o abuso de pessoas em situação de vulnerabilidade. Ressaltar essas questões durante a adolescência é fundamental, pois contribui para que jovens que, de alguma forma, tenham vivenciado abusos psicológicos e/ou físicos sintam-se encorajados a buscar ajuda especializada.</p>
+      <p>As palestrantes promoveram dinâmicas voltadas à socialização dos jovens, com foco na interação social e no desenvolvimento do autoconhecimento. A palestra também abordou a importância do dia 18 de maio, onde essa data é nacionalmente conhecida no Brasil como o Dia Nacional de Combate ao Abuso e à Exploração Sexual de Crianças e Adolescentes. Embora o foco seja a infância e adolescência, muitas das vítimas também são meninas, o que se conecta ao combate à violência de gênero. Portanto, apesar de não ser uma data voltada exclusivamente à mulher, ela integra uma luta mais ampla pelos direitos humanos e contra todo tipo de violência.</p>
+      <p>A violência contra a mulher é uma grave violação dos direitos humanos e um problema social que afeta mulheres de todas as idades, classes sociais, raças e culturas. Ela pode se manifestar de diversas formas — física, psicológica, sexual, moral e patrimonial — e ocorre tanto em ambientes públicos quanto privados, muitas vezes dentro do próprio lar. Combater esse tipo de violência exige o envolvimento de toda a sociedade: por meio da denúncia, da promoção da equidade de gênero, da educação para o respeito e da criação de ambientes seguros e acolhedores para as vítimas. Em briga de marido e mulher, devemos meter a colher sim!</p>
+      <p>Abusos sexuais, morais e psicológicos causam danos profundos e duradouros na vida de crianças e adolescentes. Esses traumas comprometem a autoestima, o desenvolvimento emocional, o desempenho escolar e a capacidade de se relacionar com os outros. As vítimas podem sofrer de ansiedade, depressão, isolamento social e, em casos graves, desenvolver comportamentos autodestrutivos. A ajuda adequada e o apoio emocional são fundamentais para a recuperação e proteção dessas crianças e adolescentes. Por isso, se precisar de ajuda, busque agentes especializados para lhe ajudar com um tratamento adequado. </p>
+
+      <div class="emergency-contact">
+        <h3>CENTRO DE REFERÊNCIA ESPECIALIZADO DE ASSISTÊNCIA SOCIAL - CREAS</h3>
+        <p><strong>Tel: (85) 3513-2015 / (85) 98953-0916.</strong> (ligação gratuita)</p>
+        <p><strong>Endereço:</strong> RUA JOSMO GURGEL ARAÚJO, 1136 - Centro - Itaitinga.</p>
+        <p><strong>Atendimento:</strong> 08:00 às 12:00 e 13:00 às 17:00.</p>
+      </div>
     </div>
+  </div>
+
+  <footer>
+    © 2025 EcoAri. Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>
