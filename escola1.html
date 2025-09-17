@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escola - EcoAri</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      background-color: #2E7D32;
+      padding: 20px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 24px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    .menu-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .menu-dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #ffffff;
+      min-width: 160px;
+      z-index: 1;
+    }
+
+    .menu-dropdown-content a {
+      color: rgb(91, 175, 91);
+      padding: 12px 16px;
+      display: block;
+    }
+
+    .menu-dropdown-content a:hover {
+      background-color: #ffab0e;
+    }
+
+    .menu-dropdown:hover .menu-dropdown-content {
+      display: block;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #2E7D32;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .card {
+      background-color: white;
+      border-left: 6px solid #FF9800;
+      margin: 20px 0;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #2E7D32;
+    }
+
+    .card p {
+      color: #444;
+      line-height: 1.5;
+    }
+
+    /* Imagens lado a lado, ajustando proporção */
+    .card .image-row {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .card .image-row img:first-child {
+      width: 55%; /* primeira imagem vertical menor */
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .card .image-row img:last-child {
+      width: 40%; /* segunda imagem horizontal maior */
+      height: auto;
+      border-radius: 8px;
+    }
+
+    footer {
+      background-color: #2E7D32;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
+      .content {
+        padding: 10px;
+      }
+
+      .card {
+        padding: 15px;
+      }
+
+      .card .image-row {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .card .image-row img {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>EcoAri</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <div class="menu-dropdown">
+        <a href="#">Notícias ▾</a>
+        <div class="menu-dropdown-content">
+          <a href="escola.html">Escola</a>
+          <a href="brasil.html">Brasil</a>
+          <a href="mundo.html">Mundo</a>
+          <a href="regiao.html">Região</a>
+          <a href="curiosidades.html">Antirracismo</a>
+
+        </div>
+      </div>
+      <a href="sobre.html">Sobre</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <div class="content">
+    <h2></h2>
+    
+    <div class="card">
+      <h3> Eleição para o Grêmio Estudantil</h3>
+
+      <!-- Imagens lado a lado -->
+      <div class="image-row">
+        <img src="Imagem/upm.jpg" alt="Apresentação de dança Vogue">
+        
+      </div>
+
+      <!-- Texto abaixo das imagens -->
+     <!-- <p>Olá, aluno! Está interessado em saber os acontecimentos dos últimos dias no nosso ambiente escolar? Sorte a sua, porque o EcoAri veio com todas as informações necessárias para deixar você ciente dos últimos fatos ocorridos.</p>
+
+      <p>Em clima de volta às aulas, os eventos escolares voltaram com todo o vapor! Nesta semana, em 11 de agosto, foi comemorado o Dia do Estudante. Para essa data especial, a EEEP Professor Francisco Aristóteles de Sousa preparou um cronograma de entretenimento para celebrarmos. O Dia do Estudante tem como objetivo incentivar o ensino e a alfabetização no país, além de destacar a importância e a necessidade dos estudos na vida dos cidadãos. Durante o dia, foram esquematizados sorteios com direito a premiações, houve jogos e apresentações musicais. </p>
+
+      <p>Com a parceria de algumas empresas, foram garantidos brindes para a realização dos sorteios. Muitos alunos tiveram a oportunidade de participar e serem premiados. Para os fãs de games e jogos online, um dos laboratórios foi transformado em fliperama, com variados jogos interativos para um momento de descontração. 
+O destaque da manhã foram as apresentações artísticas e musicais no auditório. Performando as apresentações do festival de artes, os estudantes da segunda série do curso de Redes de Computadores apresentaram, mais uma vez, um espetáculo com músicas populares e atemporais.</p>
+
+      <p>O protagonismo da turma de Informática 1 no entretenimento foi notável, assim como sua influência na disseminação da arte. Novamente, os alunos se mostram cada vez mais fluentes sobre as pautas sociais pertinentes na atualidade. O artista nacionalmente reconhecido, Ney Matogrosso foi representado pelo estudante <strong> Thiago Camillu.</strong> O aluno cativou o público com a performance de "Homem com H", música autoral de Ney. Essa canção explora a construção da masculinidade e a pressão social para que os homens se encaixem em determinados padrões. A letra, com seu tom irônico e bem-humorado, questiona a ideia tradicional de homem, utilizando expressões populares e referências culturais para criar uma narrativa envolvente sobre identidade masculina. A música, de forma geral, convida à reflexão sobre a identidade masculina, questionando os padrões impostos e promovendo uma visão mais inclusiva e autêntica da masculinidade, segundo o site Letras.mus.br.</p>
+
+      <p> O estudante não teve receio de expressar sua ousadia, igual ao cantor. Ney Matogrosso não se considera parte de um movimento específico e não gosta de ser definido por um único rótulo. Em suas próprias palavras, ele afirma: "Eu nunca me encaixei em rótulos, sempre fui livre. Tive relações com homens e mulheres, e isso sempre foi natural para mim". Embora seja considerado um ícone para a comunidade LGBTQIA+, Ney Matogrosso sempre enfatizou a importância da liberdade individual e da autoaceitação. 
+</p>
+
+      <p>Além disso, a turma da primeira série de Informática, soube servir cultura, história e arte! Os alunos apresentaram também o estilo de dança Vogue. Um estilo marcado por poses, 'caras e bocas', o vogue é um movimento de reafirmação de identidade de gêneros e sexualidade. Originado nas comunidades LGBTQI+, negra, latina e periférica dos Estados Unidos, ganhou popularidade nos anos 90, com a música e clipe Vogue, da Madonna. A apresentação foi inspirada na performance de Madonna no MTV Awards 1990, com uma temática lúdica e clássica da burguesia. 
+O estudante <b>Yuri Félix</b>, interpretou com excelência a essência do vogue como uma forma de expressão e celebração a comunidade LGBTQIA+. 
+ A cena de toda a escola aplaudindo e apoiando a liberdade de expressão dos estudantes foi linda! A abordagem de pautas sociais no ambiente escolar não apenas promove o acolhimento, mas também estabelece a escola como um refúgio seguro e uma fonte de apoio para muitos alunos. Assim, a discussão de todas as causas se torna essencial no ambiente educacional.</p> 
+<p> E essa ideia não fica somente no auditório. Ela continua em nossa biblioteca escolar. A nossa coleção de livros sobre a história e a cultura afrodescendente é um verdadeiro tesouro! Enquanto os alunos usavam de suas liberdades de expressão, levantando pautas, exigindo respeito e representatividade, esses livros já estavam lá, há tempos, contando histórias, mostrando lutas, vitórias e abordando temas sociais.
+Com as performances do auditório e os livros da biblioteca mostra que a escola não só nos apoia a falar o que pensamos, mas também nos dá as ferramentas para entender esses assuntos de verdade. A biblioteca vira um lugar de aprendizado onde a gente pode transformar o nosso interesse pela diversidade em conhecimento.
+</p>
+
+      <p>E você, o que achou das performances?
+Que tal ir na biblioteca ler mais sobre as histórias afrodescendentes e enriquecer seu conhecimento? 
+Te esperamos lá!</p><!-->
+    <p> Olá, aluno! Está interessado em saber os acontecimentos dos últimos dias no nosso ambiente escolar? Sorte a sua, porque o EcoAri veio com todas as informações necessárias para deixar você ciente dos últimos fatos ocorridos.</p> 
+<p>  Nessas últimas semanas, tivemos um dos eventos mais importantes para a comunidade escolar: a eleição para o Grêmio Estudantil. A equipe tem como principal papel representar os interesses dos alunos, promovendo a participação de todos nas decisões da escola. Tem como foco organizar atividades culturais, esportivas e sociais, defendendo os direitos estudantis e atuando no diálogo com a direção para melhorar o âmbito escolar.</p> 
+<p>Ao todo, três chapas se inscreveram para concorrer ao Grêmio Estudantil 2025: Chapa UPM (União Para Mudança); VDR (Vozes Da Revolução); Futuro Em Ação. As chapas concorrentes participaram de um debate, que é importante, pois é o momento de cada equipe mostrar suas ideias e propostas para a escola. Assim, os alunos podem conhecer melhor quem está concorrendo, tirar dúvidas e decidir com mais segurança em quem votar.
+</p>
+<p>   A eleição e o debate foram organizados por um grupo de alunos da terceira série, que foram imparciais durante todo o processo seletivo. A organização também contou com a ajuda do professor Elivelton, que ofereceu apoio às chapas concorrentes e aos demais alunos com dúvidas em relação ao novo grêmio.
+</p>
+<p>  A votação ocorreu na quinta-feira (24/4) começando pelas turmas da primeira série. Os alunos eleitores presentes no dia levaram bandeiras e adesivos para a campanha e a divulgação de sua chapa favorita. O resultado saiu na sexta-feira (25/4), e a equipe vencedora, favorita pela maioria dos alunos, foi a chapa UPM (União Para Mudança), com 381 votos no total. A posse do Grêmio Estudantil ocorrerá na terça-feira (29/4).
+</p>
+<p>E o que você achou dessa eleição? Esperava outro resultado?</p>
+
+    </div>
+  </div>
+
+  <footer>
+    © 2025 EcoAri. Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>

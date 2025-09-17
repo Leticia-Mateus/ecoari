@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo - EcoAri</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Open Sans', sans-serif; margin: 0; padding: 0; background-color: #f5f5f5; }
+    header { background-color: #2E7D32; padding: 20px; color: white; display: flex; justify-content: space-between; align-items: center; }
+    header h1 { font-family: 'Montserrat', sans-serif; font-size: 24px; }
+    nav a { color: white; margin: 0 10px; text-decoration: none; font-weight: bold; }
+    nav a:hover { color: #FF9800; }
+    .menu-dropdown { position: relative; display: inline-block; }
+    .menu-dropdown-content { display: none; position: absolute; background-color: #fafafa; min-width: 160px; z-index: 1; }
+    .menu-dropdown-content a { color: rgb(62, 161, 67); padding: 12px 16px; display: block; }
+    .menu-dropdown-content a:hover { background-color: #e67e00; color: white; }
+    .menu-dropdown:hover .menu-dropdown-content { display: block; }
+    .content { max-width: 1000px; margin: 30px auto; padding: 20px; }
+    h2 { color: #2E7D32; font-family: 'Montserrat', sans-serif; }
+    .card { background-color: white; border-left: 6px solid #FF9800; margin: 20px 0; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .card h3 { margin-top: 0; color: #2E7D32; }
+    .card p { color: #444; line-height: 1.6; }
+    footer { background-color: #2E7D32; color: white; text-align: center; padding: 15px; margin-top: 40px; }
+
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .image-item {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      width: 280px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .image-item img {
+      width: 100%;
+      max-height: 320px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .image-item p {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #444;
+    }
+
+    .content img {
+      width: 100%;
+      max-width: 550px;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>EcoAri</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <div class="menu-dropdown">
+        <a href="#">Notícias ▾</a>
+        <div class="menu-dropdown-content">
+          <a href="escola.html">Escola</a>
+          <a href="brasil.html">Brasil</a>
+          <a href="mundo.html">Mundo</a>
+          <a href="regiao.html">Região</a>
+          <a href="curiosidades.html">Antirracismo</a>
+        </div>
+      </div>
+      <a href="sobre.html">Sobre</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <div class="content">
+    <h2>Met Gala 2025: Moda sustentável no Tapete Azul</h2>
+    
+    <div class="card">
+      <h3>Evento e tema</h3>
+      <p>Na noite de 5 de maio de 2025, o Metropolitan Museum of Art em Nova York, Estados Unidos, foi palco do tão aguardado Met Gala, evento anual que reúne celebridades, estilistas e artistas para celebrar a moda exibindo suas vestimentas glamurosas e arrecadar fundos para o Costume Institute.</p>
+      <p>Este ano, o tema foi “Superfine: Tailoring Black Style”, uma homenagem ao dandyismo negro e à elegância subversiva que desafia normas sociais e culturais.</p>
+    </div>
+
+    <div class="card">
+      <h3>Decoração sustentável</h3>
+      <p>A decoração do evento também refletiu o compromisso com a sustentabilidade. O tapete, tradicionalmente vermelho, foi substituído por um azul profundo salpicado de flores brancas e amarelas, inspiradas na flor narciso. Criado por uma empresa de Kerala, na Índia, o tapete foi confeccionado com materiais ecológicos, alinhando-se ao tema do evento e destacando a importância da preservação ambiental na moda.</p>
+    </div>
+
+    <div class="card">
+      <h3>Looks sustentáveis no Tapete Azul</h3>
+      <p>Diversas celebridades aproveitaram a ocasião para promover práticas sustentáveis na moda:</p>
+      <p>Janelle Monáe desfilou com um traje de Thom Browne que se transformava ao longo da noite, simbolizando a fluidez e a transformação. Ela também usou um broche feito de diamantes reciclados, destacando a importância da reutilização de materiais preciosos.</p>
+    </div>
+
+    <div class="card">
+      <h3>Galeria: Moda Sustentável no Met Gala 2025</h3>
+      <div class="image-gallery">
+        <div class="image-item">
+          <img src="Imagem/pamella.jpeg" alt="Vestido reciclado">
+          <p><strong>Pamela Anderson</strong><br>Reciclou mais de 35 quilates de diamantes de seu look do ano anterior, criando novas joias com a Pandora, promovendo a economia circular na alta-costura.</p>
+        </div>
+        <div class="image-item">
+          <img src="Imagem/janielle.jpeg" alt="Janelle Monáe">
+          <p><strong>Janelle Monáe</strong><br>Desfilou com traje de Thom Browne que se transformava ao longo da noite, simbolizando a fluidez e a transformação. Usou broche feito de diamantes reciclados.</p>
+        </div>
+        <div class="image-item">
+          <img src="Imagem/kendal.jpeg" alt="Kendall Jenner">
+          <p><strong>Kendall Jenner</strong><br>Colaborou com a designer britânica Torishéju Dumi para criar um conjunto inspirado na ícone do Harlem Renaissance, Gladys Bentley. Confeccionado com tecidos excedentes.</p>
+        </div>
+        <div class="image-item">
+          <img src="Imagem/antony.jpeg" alt="Anthony Pratt">
+          <p><strong>Anthony Pratt</strong><br>Bilionário australiano conhecido como “O Rei do Papelão”, usou terno verde com a inscrição “100% Reciclado”, destacando seu compromisso com a sustentabilidade.</p>
+        </div>
+        <div class="image-item">
+          <img src="Imagem/mary.jpeg" alt="Mary J. Blige">
+          <p><strong>Mary J. Blige</strong><br>Acompanhada pela estilista Stella McCartney, apresentou terno branco de lã certificada pelo Responsible Wool Standard, mostrando compromisso com práticas sustentáveis e valorização da cultura negra.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 EcoAri – Todos os direitos reservados
+  </footer>
+</body>
+</html>
